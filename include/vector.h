@@ -6,7 +6,7 @@
 /*   By: wkonings <wkonings@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/12/19 22:52:56 by wkonings      #+#    #+#                 */
-/*   Updated: 2023/01/23 01:51:22 by wkonings      ########   odam.nl         */
+/*   Updated: 2023/01/23 02:40:08 by wkonings      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 # define VECTOR_H
 # include <math.h>
 
+/**
+ * @brief A vector containing 4 doubles.
+ * @details	vector_size requires a power of 2.
+ * 			Can be accessed like an array. Use enums XYZW, or RGBA for clarity.
+ * 
+ * @example t_vec vector;
+ * 			vector[0] = 7.0f;
+ * 			vector[X] = 2.4;
+ * 			vector[G] = 6;
+ */
 typedef double	t_vec __attribute__ ((vector_size (4 * sizeof(double))));
 
 typedef enum e_vecnum
